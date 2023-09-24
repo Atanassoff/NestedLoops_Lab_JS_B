@@ -1,0 +1,16 @@
+function demo(input){
+    let n1 = Number(input[0]);
+    let n2 = Number(input[1]);
+    let mag = Number(input[2]);
+    let count = 0;
+    for(i = n1; i <= n2; i++){
+        for(j = n1; j <= n2; j++){
+            count++;
+            if(i + j == mag){
+                console.log(`Combination N:${count} (${i} + ${j} = ${mag})`);
+                return;
+            }
+        }    
+    }
+    console.log(`${count} combinations - neither equals ${mag}`);
+}
