@@ -1,0 +1,16 @@
+function demo(input){
+    let floors = Number(input[0]);
+    let rooms = Number(input[1]);
+    let sign = "";
+    let str = "";
+    for (i = floors; i >= 1; i--){
+        if(i == floors){sign = "L";}
+        else if(i % 2 == 1){sign = "A";}
+        else{sign = "O";}
+        for(j = 0; j < rooms; j++){
+            str += `${sign}${i}${j} `;
+        }
+        console.log(str);
+        str = "";
+    }
+}
